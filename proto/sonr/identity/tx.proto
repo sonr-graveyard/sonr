@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+package sonr.identity;
+
+import "sonr/identity/did_document.proto";
+
+option go_package = "github.com/sonrhq/sonr/x/identity/types";
+
+// Msg defines the Msg service.
+service Msg {
+  rpc CreateDIDDocument (MsgCreateDIDDocument) returns (MsgCreateDIDDocumentResponse);
+  rpc UpdateDIDDocument (MsgUpdateDIDDocument) returns (MsgUpdateDIDDocumentResponse);
+  rpc DeleteDIDDocument (MsgDeleteDIDDocument) returns (MsgDeleteDIDDocumentResponse);
+}
+message MsgCreateDIDDocument {
+  string creator = 1;
+  string index   = 2;
+}
+
+message MsgCreateDIDDocumentResponse {}
+
+message MsgUpdateDIDDocument {
+  string creator = 1;
+  string index   = 2;
+}
+
+message MsgUpdateDIDDocumentResponse {}
+
+message MsgDeleteDIDDocument {
+  string creator = 1;
+  string index   = 2;
+}
+
+message MsgDeleteDIDDocumentResponse {}
+

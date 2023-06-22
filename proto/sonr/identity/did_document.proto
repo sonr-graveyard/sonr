@@ -1,0 +1,10 @@
+syntax = "proto3";
+package sonr.identity;
+
+option go_package = "github.com/sonrhq/sonr/x/identity/types";
+
+message DIDDocument {
+  string index = 1; 
+  string creator = 2;
+}
+

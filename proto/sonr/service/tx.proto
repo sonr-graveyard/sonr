@@ -1,0 +1,7 @@
+syntax = "proto3";
+package sonr.service;
+
+option go_package = "github.com/sonrhq/sonr/x/service/types";
+
+// Msg defines the Msg service.
+service Msg {}

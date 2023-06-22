@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package sonr.identity;
+
+import "gogoproto/gogo.proto";
+import "sonr/identity/params.proto";
+import "sonr/identity/did_document.proto";
+
+option go_package = "github.com/sonrhq/sonr/x/identity/types";
+
+// GenesisState defines the identity module's genesis state.
+message GenesisState {
+           Params      params          = 1 [(gogoproto.nullable) = false];
+           string      port_id         = 2;
+  repeated DIDDocument dIDDocumentList = 3 [(gogoproto.nullable) = false];
+}
+
